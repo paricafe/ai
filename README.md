@@ -1,14 +1,14 @@
 <h1><p align="center"><img src="./ai.svg" alt="藍" height="200"></p></h1>
-<p align="center">An Ai for Misskey. <a href="./torisetu.md">About Ai</a></p>
+<p align="center">An Ai for Misskey. <a href="使用教程.md">About Ai</a></p>
 
-## これなに
-Misskey用の日本語Botです。
+## 这是什么？
+这是方便Misskey使用的日语（本repo为中文优化）Bot。
 
-## インストール
-> Node.js と npm と MeCab (オプション) がインストールされている必要があります。
+## 安装
+> 您需要安装Node.js、npm和MeCab（可选）。
 
-まず適当なディレクトリに `git clone` します。
-次にそのディレクトリに `config.json` を作成します。中身は次のようにします:
+首先，做一个`git clone`到一个合适的目录。
+接下来，在该目录下创建一个`config.json`文件。 内容应如下：
 ``` json
 {
 	"host": "https:// + あなたのインスタンスのURL (末尾の / は除く)",
@@ -26,7 +26,7 @@ Misskey用の日本語Botです。
 	"memoryDir": "memory.jsonの保存先（オプション、デフォルトは'.'（レポジトリのルートです））"
 }
 ```
-`npm install` して `npm run build` して `npm start` すれば起動できます
+您可以通过运行`npm install`、`npm run build`和`npm start`来启动。
 
 ## Dockerで動かす
 まず適当なディレクトリに `git clone` します。
@@ -55,10 +55,10 @@ Misskey用の日本語Botです。
 ## フォント
 一部の機能にはフォントが必要です。藍にはフォントは同梱されていないので、ご自身でフォントをインストールディレクトリに`font.ttf`という名前で設置してください。
 
-## 記憶
-藍は記憶の保持にインメモリデータベースを使用しており、藍のインストールディレクトリに `memory.json` という名前で永続化されます。
+## 记忆
+藍使用内存数据库来保存记忆，它以`memory.json`为名持久地保存在藍的安装目录中。
 
-## ライセンス
+## 开源许可证
 MIT
 
 ## Awards

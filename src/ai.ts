@@ -243,8 +243,8 @@ export default class 藍 {
 			}
 		};
 
-		// コンテキストがあればコンテキストフック呼び出し
-		// なければそれぞれのモジュールについてフックが引っかかるまで呼び出し
+		// 如果有上下文，则调用上下文钩子
+		// 如果没有，则对每个模块进行调用，直到钩子被抓住为止。
 		if (context != null) {
 			const handler = this.contextHooks[context.module];
 			const res = await handler(context.key, msg, context.data);

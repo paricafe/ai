@@ -50,7 +50,7 @@ export default class extends Module {
 
 	@bindThis
 	private async mentionHook(msg: Message) {
-		if (msg.includes(['リバーシ', 'オセロ', 'reversi', 'othello'])) {
+		if (msg.includes(['黑白棋', '下棋', 'reversi', 'othello'])) {
 			if (config.reversiEnabled) {
 				msg.reply(serifs.reversi.ok);
 
@@ -83,7 +83,7 @@ export default class extends Module {
 
 			this.onReversiGameStart(game);
 		} else {
-			// todo (リバーシできない旨をメッセージで伝えるなど)
+			// todo (发出不能下黑白棋的信息。)
 		}
 	}
 
@@ -103,7 +103,7 @@ export default class extends Module {
 			gameId: game.id
 		});
 
-		// フォーム
+		// 数据表
 		const form = [{
 			id: 'publish',
 			type: 'switch',
@@ -115,7 +115,7 @@ export default class extends Module {
 			label: '強さ',
 			value: strength,
 			items: [{
-				label: '接待',
+				label: '照顾',
 				value: 0
 			}, {
 				label: '弱',
@@ -124,10 +124,10 @@ export default class extends Module {
 				label: '中',
 				value: 3
 			}, {
-				label: '強',
+				label: '强',
 				value: 4
 			}, {
-				label: '最強',
+				label: '最强',
 				value: 5
 			}]
 		}];
