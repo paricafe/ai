@@ -16,6 +16,13 @@ function getUserName(user) {
 	return user.name || user.username;
 }
 
+const titles = [
+	'さん', 'サン', 'ｻﾝ', '㌠',
+	'ちゃん', 'チャン', 'ﾁｬﾝ',
+	'君', 'くん', 'クン', 'ｸﾝ',
+	'先生', 'せんせい', 'センセイ', 'ｾﾝｾｲ'
+];
+
 class Session {
 	private account: User;
 	private game: any;
